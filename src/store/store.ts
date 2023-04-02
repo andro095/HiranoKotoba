@@ -7,7 +7,8 @@ import { configureStore } from "@reduxjs/toolkit";
 // Hooks
 
 // Funcionalidad
-import { authSlice } from './auth/authSlice';
+import { authSlice } from './auth';
+import { configSlice } from "./config";
 
 // Assets
 
@@ -15,5 +16,6 @@ export const store = configureStore({
     reducer: {
         // Aqui van los reducers
         auth: authSlice.reducer,
+        config: configSlice.reducer,
     }
 })

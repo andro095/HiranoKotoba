@@ -1,12 +1,14 @@
 // Librerias de React
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { IntlProvider } from 'react-intl';
+import { useSelector } from 'react-redux';
 
 // Librerias de Terceros
 import { locale } from "primereact/api";
 
 // Archivos propios
 import { AppRouter } from './router';
+import { RootState } from './interfaces';
 
 // Funcionalidad
 
@@ -14,13 +16,9 @@ import { AppRouter } from './router';
 import { locales } from './locale/locales';
 
 
-const initialLanguage : string = navigator.language.split('-')[0] in locales ? navigator.language.split('-')[0] : 'es';
-
 function App() {
 
-  // Implement function to change language
-
-  const [language, setLanguage] = useState(initialLanguage);
+  const { language } = useSelector(( state: RootState ) => state.config);
 
   useEffect(() => {
 

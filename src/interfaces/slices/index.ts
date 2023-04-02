@@ -1,1 +1,2 @@
-export * from './authSliceInterface';
+export * from './authState';
+export * from './configState';
