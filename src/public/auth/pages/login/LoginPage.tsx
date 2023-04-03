@@ -1,6 +1,9 @@
+import { AuthLayout } from "../../layout"
 
 export const LoginPage = () => {
     return (
-        <div>LoginPage</div>
+        <AuthLayout>
+            <div>LoginPage</div>
+        </AuthLayout>
     )
 }

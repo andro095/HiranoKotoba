@@ -1,6 +1,13 @@
+import { ReactNode } from 'react';
 
-export const AuthLayout = () => {
+type Props = {
+    children: ReactNode;
+}
+
+export const AuthLayout = ( { children } : Props ) => {
     return (
-        <div>AuthLayout</div>
+        <div className='w-full surface-section h-full flex justify-content-center'>
+            { children }
+        </div>
     )
 }
