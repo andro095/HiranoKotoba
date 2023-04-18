@@ -18,11 +18,11 @@ const msteps: StepperItems = [
 
 export const LoginPage = () => {
 
-    const { isBreakpoints } = useBreakpoints();
+    const { isXs } = useBreakpoints();
     
     useEffect(() => {
-      console.log(isBreakpoints)
-    }, [isBreakpoints])
+      console.log(isXs)
+    }, [isXs])
     
 
     return (

@@ -1,7 +1,7 @@
-export interface Breakpoints {
-    [key: string]: number;
-}
+import { breakpoints } from "../../theme";
 
-export interface MediaQueries {
-    [key: string]: string;
+export type BreakpointTypes = keyof typeof breakpoints
+
+export type MediaQueries = {
+    [key in BreakpointTypes]: string;
 }

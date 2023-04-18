@@ -1,18 +1,30 @@
+// Librerias de React
 import { useEffect, useState } from "react"
-import { breakpoints } from "../theme";
-import { IsBreakpoint } from "../interfaces";
-        
-const breakpointKeys : string[] = Object.keys(breakpoints)
-const reversedBreakpointKeys : string[] = [...breakpointKeys].reverse();
 
+// Librerias de Terceros
+import { capitalize, keys, map, reverse } from "lodash";
+
+// Archivos propios
+import { BreakpointTypes, IsBreakpoint, isBreakpointTypes } from "../interfaces";
+import { breakpoints } from "../theme";
+
+// Hooks
+
+// Funcionalidad
+
+// Assets
+
+    
+
+
+const revBreakpointKeys : BreakpointTypes[] = reverse(keys(breakpoints)) as BreakpointTypes[];
+const isBreakpointKeys : isBreakpointTypes[] = map(breakpoints, (_, key) => `is${capitalize(key)}`) as isBreakpointTypes[];
 
 
 const initIsBreakpoint = () : IsBreakpoint => {
     const isBreakpoint : IsBreakpoint = {} as IsBreakpoint;
 
-    breakpointKeys.forEach((key) => {
-        isBreakpoint[key] = false;
-    })
+    isBreakpointKeys.forEach(key => isBreakpoint[key] = false)
 
     return isBreakpoint;
 }
@@ -28,11 +40,11 @@ export const useBreakpoints = () => {
     }
 
     const updateIsBreakpoints = () => {      
-        for (const element of reversedBreakpointKeys) {
+        for (const element of revBreakpointKeys) {
             if (breakpoint >= breakpoints[element]) {
                 setIsBreakpoints({
                     ...initIsBreakpoint(),
-                    [element]: true
+                    [`is${capitalize(element)}`]: true
                 })
                 break;
             }
@@ -56,6 +68,6 @@ export const useBreakpoints = () => {
     
 
 
-    return { breakpoint, isBreakpoints }
+    return { breakpoint, isBreakpoints, ...isBreakpoints }
 
 }

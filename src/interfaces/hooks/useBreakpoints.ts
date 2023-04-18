@@ -1,5 +1,8 @@
-export type BreakpointsTypes = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+import { BreakpointTypes } from "../theme";
 
-export interface IsBreakpoint {
-    [key: string]: boolean;
+export type isBreakpointTypes = `is${Capitalize<BreakpointTypes>}`
+
+export type IsBreakpoint = {
+    [key in isBreakpointTypes]: boolean;
 }
+

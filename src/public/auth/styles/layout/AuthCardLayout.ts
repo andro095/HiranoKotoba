@@ -1,8 +1,6 @@
 import { css } from "@emotion/react";
 import { imp, mq } from "../../../../theme";
 
-
-
 export const AuthCardLayoutStyle = {
     card: css({
         [mq.sm]: {
