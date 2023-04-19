@@ -32,7 +32,7 @@ export const LoginPage = () => {
             steps={msteps}
         >
             <AuthCardLayout
-                title="Login"
+                title="Iniciar Sesión"
             >
                 <div>LoginPage</div>
             </AuthCardLayout>

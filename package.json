@@ -4,14 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
+    "@fontsource/raleway": "^4.5.12",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/lodash": "^4.14.194",
+    "classnames": "^2.3.2",
     "formik": "^2.2.9",
     "localforage": "^1.10.0",
     "lodash": "^4.17.21",
