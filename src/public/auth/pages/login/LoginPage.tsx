@@ -5,13 +5,13 @@ import { Button } from "primereact/button"
 
 // Archivos propios
 import { GoogleButton } from "../../components"
-import { MInputText, MPassword, MSubmitButton } from "../../../../components"
+import { MInputText, MPassword, MSubmitButton } from "@components";
 import { logInFields, logInSchema } from "../../formik"
 import { AuthCardLayout, AuthLayout } from "../../layout"
 import { LoginPageStyle as styles } from "../../styles";
 
 // Funcionalidad
-import { useMessage } from "../../../../hooks"
+import { useMessage } from "@hooks";
 import { useFormik } from "formik"
 
 // Assets

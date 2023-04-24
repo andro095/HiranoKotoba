@@ -15,7 +15,21 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@components": ["./src/components"],
+      "@enums": ["./src/enums"],
+      "@hooks": ["./src/hooks"],
+      "@interfaces": ["./src/interfaces"],
+      "@locale": ["./src/locale"],
+      "@private": ["./src/private"],
+      "@public": ["./src/public"],
+      "@router": ["./src/router"],
+      "@store": ["./src/store"],
+      "@theme": ["./src/theme"],
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
