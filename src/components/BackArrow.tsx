@@ -1,17 +1,26 @@
+// Librerias de React
+import { useNavigate } from 'react-router-dom';
+
+// Librerias de Terceros
 import classNames from 'classnames';
 import { Button } from 'primereact/button';
+
+// Archivos propios
+
+// Funcionalidad
 import { useBreakpoints } from '../hooks';
-        
+
+// Assets
+     
 
 export const BackArrow = () => {
 
-    // TODO : Terminar de implementar el componente BackArrow
-
     const { isXs, isSm } = useBreakpoints();
+    const navigate = useNavigate();
 
     const divClasses : string = classNames(
         'w-full',
-        { 'flex justify-content-center mt-2' : isXs || isSm }
+        { 'flex justify-content-center mt-3' : isXs || isSm }
     )
     
     const buttonClasses : string = classNames(
@@ -19,6 +28,8 @@ export const BackArrow = () => {
             'w-3rem h-3rem' : isXs || isSm,
         }
     )
+
+    const onClick = () => navigate(-1);
 
     return (
         <div
@@ -31,6 +42,7 @@ export const BackArrow = () => {
                 text={ !(isXs || isSm) }
                 rounded={ isXs || isSm }
                 className={ buttonClasses }
+                onClick={ onClick }
             />
         </div>
     )

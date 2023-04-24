@@ -140,5 +140,17 @@
         "zoomOut": "Reducir",
         "rotateRight": "Girar derecha",
         "rotateLeft": "Girar izquierda"
+    },
+    "logIn": {
+        "title": "Iniciar sesión",
+        "invalidEmail": "Correo electrónico no válido",
+        "requiredEmail": "Correo electrónico requerido",
+        "requiredPassword": "Contraseña requerida",
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "submit": "Ingresar",
+        "google": "Ingresar con Google",
+        "newUser": "¿No tienes una cuenta? Registrate",
+        "forgotPassword": "He olvidado mi contraseña"
     }
 }
