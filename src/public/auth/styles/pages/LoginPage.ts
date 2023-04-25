@@ -1,14 +1,14 @@
-// Librerias de Terceros
+// React Libraries
+
+// Third Party Libraries
 import { css } from "@emotion/react";
 
-// Archivos propios
-import { colors, imp } from "../../../../theme";
+// Interfaces
 
 // Hooks
 
-// Funcionalidad
-
-// Assets
+// Theme
+import { colors, imp } from "@theme";
 
 
 export const LoginPageStyle = {

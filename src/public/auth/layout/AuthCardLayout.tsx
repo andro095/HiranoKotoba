@@ -1,16 +1,18 @@
-// Librerias de React
+// React Libraries
 
-// Librerias de Terceros
+// Third Party Libraries
 import { Card } from 'primereact/card';
 
-// Archivos propios
+// Components
 import { CardHeader, CardTitle } from "../components";
-import { AuthCardLayoutProps } from "../../../interfaces"
+
+// Interfaces
+import { AuthCardLayoutProps } from '@interfaces';
+
+// Hooks
+
+// Styles
 import { AuthCardLayoutStyle as styles } from "../styles";
-
-// Funcionalidad
-
-// Assets
         
 
 export const AuthCardLayout = ( { title, hasBackArrow = false, isSubmitting = false, children } : AuthCardLayoutProps ) => {

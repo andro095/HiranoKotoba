@@ -1,31 +1,38 @@
-// Librerias de React
+// React Libraries
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-
-// Librerias de Terceros
 import { Provider } from 'react-redux'
+
+// Third Party Libraries
 import { addLocale } from "primereact/api";
 
-// Archivos propios
+// Components
 import App from './App'
 
-// Funcionalidad
-import { store } from './store'
+// Interfaces
 
-// Assets
-import "./theme/theme.css";     
-import "primereact/resources/primereact.min.css";
+// Hooks
+
+// Store
+import { store } from '@store'
+
+// Locale
+import { locales } from '@locale';
+
+
+// Styles
 import "primeflex/primeflex.css";
 import "primeicons/primeicons.css";                                         
+import "primereact/resources/primereact.min.css";
 import './index.css';
+import "./theme/theme.css";     
 
 import '@fontsource/raleway/300.css';
 import '@fontsource/raleway/400.css';
 import '@fontsource/raleway/500.css';
 import '@fontsource/raleway/700.css';
 
-import { locales } from './locale';
 
 for (const [key, value] of Object.entries(locales)) {
   addLocale(key, value);

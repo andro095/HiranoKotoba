@@ -1,19 +1,23 @@
-// Librerias de React
+// React Libraries
 import { useEffect } from 'react';
-import { IntlProvider } from 'react-intl';
 import { useSelector } from 'react-redux';
+import { IntlProvider } from 'react-intl';
 
-// Librerias de Terceros
+// Third Party Libraries
 import { locale } from "primereact/api";
 
-// Archivos propios
-import { AppRouter } from './router';
-import { RootState } from './interfaces';
+// Components
 
-// Funcionalidad
+// Interfaces
+import { RootState } from '@interfaces';
 
-// Assets
-import { locales } from './locale/locales';
+// Hooks
+
+// Router
+import { AppRouter } from '@router';
+
+// Locale
+import { locales } from '@locale';
 
 
 function App() {

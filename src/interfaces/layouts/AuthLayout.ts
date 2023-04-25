@@ -1,15 +1,13 @@
-// Librerias de Terceros
+// React Libraries
 import { ReactNode } from "react";
+
+// Third Party Libraries
 import { MenuItem } from "primereact/menuitem";
 
-// Archivos propios
+// Interfaces
 import { NEArray } from "../generic";
 
 // Hooks
-
-// Funcionalidad
-
-// Assets
 
 
 export type StepperItems = NEArray<MenuItem, 2>;

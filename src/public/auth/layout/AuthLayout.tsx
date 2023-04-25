@@ -1,18 +1,18 @@
-// Librerias de React
-import { ReactNode } from 'react';
+// React Libraries
 
-// Librerias de Terceros
+// Third Party Libraries
 import { Image } from 'primereact/image';
 import { Steps } from 'primereact/steps';
-        
-        
-// Archivos propios
-import { AuthLayoutProps } from '../../../interfaces';
 
-// Funcionalidad
+// Components
+
+// Interfaces
+import { AuthLayoutProps } from '@interfaces';
+
+// Hooks
 
 // Assets
-import Logo from '../../../assets/logo.png';
+import Logo from '@assets/logo.png';
 
 
 export const AuthLayout = ( { hasStepper = false, hasDialog = false, steps = [{}, {}], activeIndex, dialogTitle, hasSnackbar, children } : AuthLayoutProps ) => {

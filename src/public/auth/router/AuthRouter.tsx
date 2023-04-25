@@ -1,16 +1,20 @@
-// Librerias de React
+// React Libraries
 import { Navigate, Route, Routes } from "react-router-dom"
 
-// Librerias de Terceros
+// Third Party Libraries
 
-// Archivos propios
+// Components
+
+// Interfaces
+
+// Hooks
+
+// Router
 import { SignUpRouter } from "./SignUpRouter"
 import { ResetRouter } from "./ResetRouter"
+
+// Pages
 import { LoginPage } from "../pages"
-
-// Funcionalidad
-
-// Assets
 
 
 export const AuthRouter = () => {

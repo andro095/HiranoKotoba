@@ -1,14 +1,12 @@
-// Librerias de Terceros
+// React Libraries
+
+// Third Party Libraries
 import { SerializedStyles } from "@emotion/react";
 import { FormikProps } from "formik";
 
-// Archivos propios
+// Interfaces
 
 // Hooks
-
-// Funcionalidad
-
-// Assets
 
 
 export interface MSubmitButtonProps {

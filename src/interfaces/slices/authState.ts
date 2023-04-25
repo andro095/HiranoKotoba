@@ -1,6 +1,14 @@
-import { AuthStatus } from "../../enums";
+// React Libraries
+
+// Third Party Libraries
+
+// Interfaces
 import { UserInterface } from "../models";
 
+// Enums
+import { AuthStatus } from "@enums";
+
+// Hooks
 
 
 export interface AuthState {

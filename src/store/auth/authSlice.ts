@@ -1,15 +1,15 @@
-// Librerias de Terceros
+// React Libraries
+
+// Third Party Libraries
 import { createSlice } from "@reduxjs/toolkit";
 
-// Archivos propios
-import { AuthState } from "../../interfaces";
-import { AuthStatus } from "../../enums";
+// Interfaces
+import { AuthState } from "@interfaces";
 
 // Hooks
 
-// Funcionalidad
-
-// Assets
+// Enums
+import { AuthStatus } from "@enums";
 
 
 const initialState: AuthState = {

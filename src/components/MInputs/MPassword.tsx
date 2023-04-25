@@ -1,16 +1,17 @@
-// Librerias de React
+// React Libraries
 
-// Librerias de Terceros
+// Third Party Libraries
 import classNames from "classnames";
 import { Password } from 'primereact/password';
 
-// Archivos propios
-import { MPasswordProps } from "../../interfaces"
+// Components
 
-// Funcionalidad
-import { useBreakpoints } from "../../hooks";
+// Interfaces
+import { MPasswordProps } from "@interfaces";
 
-// Assets
+// Hooks
+import { useBreakpoints } from "@hooks";
+
         
 
 export const MPassword = ({ name, label, hasFeedback = false, className, css, formik } : MPasswordProps) => {

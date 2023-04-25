@@ -1,6 +1,19 @@
+// React Libraries
 import { Route, Routes } from "react-router-dom";
-import { PrivateRouter } from "../private";
-import { PublicRouter } from "../public";
+
+// Third Party Libraries
+
+// Components
+
+// Interfaces
+
+// Hooks
+
+// Router
+import { PrivateRouter } from "@private";
+import { PublicRouter } from "@public";
+
+
 
 export const AppRouter = () => {
     

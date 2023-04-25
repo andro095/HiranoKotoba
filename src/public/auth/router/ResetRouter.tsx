@@ -1,5 +1,18 @@
+// React Libraries
+
+// Third Party Libraries
 import { Navigate, Route, Routes } from "react-router-dom"
+
+// Components
+
+// Interfaces
+
+// Hooks
+
+// Pages
 import { ResetStep1Page, ResetStep2Page, ResetStep3Page, ResetStep4Page } from "../pages"
+
+
 
 export const ResetRouter = () => {
     return (

@@ -1,14 +1,12 @@
-// Librerias de Terceros
+// React Libraries
+
+// Third Party Libraries
 import * as Yup from 'yup';
 
-// Archivos propios
-import { FormatMessage } from '../../../../interfaces';
+// Interfaces
+import { FormatMessage } from '@interfaces';
 
 // Hooks
-
-// Funcionalidad
-
-// Assets
 
 
 export const logInSchema = (formatMessage : FormatMessage) => Yup.object().shape({

@@ -1,15 +1,16 @@
-// Librerias de React
+// React Libraries
+
+// Third Party Libraries
 import { Navigate, Route, Routes } from "react-router-dom"
 
-// Librerias de Terceros
+// Components
 
-// Archivos propios
+// Interfaces
+
+// Hooks
+
+// Pages
 import { RegisterStep1Page, RegisterStep2Page } from "../pages"
-
-// Funcionalidad
-
-// Assets
-
 
 
 export const SignUpRouter = () => {

@@ -1,16 +1,16 @@
-// Librerias de Terceros
+// React Libraries
 import { configureStore } from "@reduxjs/toolkit";
 
+// Third Party Libraries
 
-// Archivos propios
+// Interfaces
 
 // Hooks
 
-// Funcionalidad
+// Store
 import { authSlice } from './auth';
 import { configSlice } from "./config";
 
-// Assets
 
 export const store = configureStore({
     reducer: {

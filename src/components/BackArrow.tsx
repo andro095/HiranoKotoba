@@ -1,17 +1,17 @@
-// Librerias de React
+// React Libraries
 import { useNavigate } from 'react-router-dom';
 
-// Librerias de Terceros
+// Third Party Libraries
 import classNames from 'classnames';
 import { Button } from 'primereact/button';
 
-// Archivos propios
+// Components
 
-// Funcionalidad
-import { useBreakpoints } from '../hooks';
+// Interfaces
 
-// Assets
-     
+// Hooks
+import { useBreakpoints } from '@hooks';
+
 
 export const BackArrow = () => {
 

@@ -1,15 +1,15 @@
-// Librerias de React
+// React Libraries
 
-// Librerias de Terceros
+// Third Party Libraries
 import classNames from "classnames"
 
-// Archivos propios
-import { CardTitleProps } from "../../../interfaces"
+// Components
 
-// Funcionalidad
-import { useBreakpoints } from "../../../hooks"
+// Interfaces
+import { CardTitleProps } from "@interfaces";
 
-// Assets
+// Hooks
+import { useBreakpoints } from "@hooks";
 
 
 export const CardTitle = ( { hasBackArrow, title } : CardTitleProps ) => {

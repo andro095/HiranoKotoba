@@ -1,13 +1,11 @@
-// Librerias de Terceros
+// React Libraries
+
+// Third Party Libraries
 import { useIntl } from 'react-intl'
 
-// Archivos propios
+// Interfaces
 
 // Hooks
-
-// Funcionalidad
-
-// Assets
 
 
 export const useMessage = () => {

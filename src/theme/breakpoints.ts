@@ -1,14 +1,12 @@
-// Librerias de Terceros
+// React Libraries
+
+// Third Party Libraries
 import { mapValues } from "lodash";
 
-// Archivos propios
-import { MediaQueries } from "../interfaces";
+// Interfaces
+import { MediaQueries } from "@interfaces";
 
 // Hooks
-
-// Funcionalidad
-
-// Assets
 
 
 export const breakpoints = {

@@ -1,14 +1,11 @@
-// Librerias de Terceros
+// React Libraries
 import { SerializedStyles, css } from "@emotion/react";
 
-// Archivos propios
+// Third Party Libraries
+
+// Interfaces
 
 // Hooks
-
-// Funcionalidad
-
-// Assets
-
 
 
 export const CardHeaderStyle = {

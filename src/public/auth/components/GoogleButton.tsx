@@ -1,15 +1,15 @@
-// Librerias de React
+// React Libraries
 import { useState } from "react"
 
-// Librerias de Terceros
+// Third Party Libraries
 import { Button } from "primereact/button"
 
-// Archivos propios
+// Components
 
-// Funcionalidad
-import { useBreakpoints, useMessage } from "../../../hooks"
+// Interfaces
 
-// Assets
+// Hooks
+import { useBreakpoints, useMessage } from "@hooks";
 
 
 export const GoogleButton = () => {

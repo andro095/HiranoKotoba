@@ -1,3 +1,4 @@
+// Theme
 import { BreakpointTypes } from "../theme";
 
 export type isBreakpointTypes = `is${Capitalize<BreakpointTypes>}`

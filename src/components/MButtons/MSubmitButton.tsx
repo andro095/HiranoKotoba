@@ -1,15 +1,15 @@
-// Librerias de React
+// React Libraries
 
-// Librerias de Terceros
+// Third Party Libraries
 import { Button } from 'primereact/button';
 
-// Archivos propios
-import { MSubmitButtonProps } from "../../interfaces"
+// Components
 
-// Funcionalidad
-import { useBreakpoints } from "../../hooks";
+// Interfaces
+import { MSubmitButtonProps } from '@interfaces';
 
-// Assets
+// Hooks
+import { useBreakpoints } from '@hooks';
 
 
 export const MSubmitButton = ( { label, formik, classname, css } : MSubmitButtonProps ) => {

@@ -1,20 +1,16 @@
-// Librerias de React
+// React Libraries
 import { useEffect, useState } from "react"
 
-// Librerias de Terceros
+// Third Party Libraries
 import { capitalize, keys, map, reverse } from "lodash";
 
-// Archivos propios
-import { BreakpointTypes, IsBreakpoint, isBreakpointTypes } from "../interfaces";
-import { breakpoints } from "../theme";
+// Interfaces
+import { BreakpointTypes, IsBreakpoint, isBreakpointTypes } from "@interfaces";
 
 // Hooks
 
-// Funcionalidad
-
-// Assets
-
-    
+// Theme
+import { breakpoints } from "@theme";
 
 
 const revBreakpointKeys : BreakpointTypes[] = reverse(keys(breakpoints)) as BreakpointTypes[];

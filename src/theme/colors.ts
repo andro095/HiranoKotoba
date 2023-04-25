@@ -1,14 +1,11 @@
-// Librerias de Terceros
+// React Libraries
 
-// Archivos propios
+// Third Party Libraries
+
+// Interfaces
 import { IColors } from "../interfaces";
 
 // Hooks
-
-// Funcionalidad
-
-// Assets
-
 
 
 export const colors : IColors = {

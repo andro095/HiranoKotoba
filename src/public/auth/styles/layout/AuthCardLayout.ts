@@ -1,14 +1,14 @@
-// Librerias de Terceros
+// React Libraries
+
+// Third Party Libraries
 import { css } from "@emotion/react";
 
-// Archivos propios
-import { imp, mq } from "../../../../theme";
+// Interfaces
 
 // Hooks
 
-// Funcionalidad
-
-// Assets
+// Theme
+import { imp, mq } from "@theme";
 
 
 export const AuthCardLayoutStyle = {

@@ -1,15 +1,15 @@
-// Librerias de Terceros
+// React Libraries
 import { createSlice } from '@reduxjs/toolkit';
 
-// Archivos propios
-import { ConfigState } from '../../interfaces/slices';
-import { locales } from '../../locale';
+// Third Party Libraries
+
+// Interfaces
+import { ConfigState } from '@interfaces';
 
 // Hooks
 
-// Funcionalidad
-
-// Assets
+// Locale
+import { locales } from '@locale';
 
 
 const initialLanguage : string = navigator.language.split('-')[0] in locales ? navigator.language.split('-')[0] : 'es';

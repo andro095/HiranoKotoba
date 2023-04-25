@@ -1,21 +1,26 @@
-// Librerias de React
+// React Libraries
 
-// Librerias de Terceros
+// Third Party Libraries
 import { Button } from "primereact/button"
-
-// Archivos propios
-import { GoogleButton } from "../../components"
-import { MInputText, MPassword, MSubmitButton } from "@components";
-import { logInFields, logInSchema } from "../../formik"
-import { AuthCardLayout, AuthLayout } from "../../layout"
-import { LoginPageStyle as styles } from "../../styles";
-
-// Funcionalidad
-import { useMessage } from "@hooks";
 import { useFormik } from "formik"
 
-// Assets
+// Components
+import { MInputText, MPassword, MSubmitButton } from "@components";
+import { GoogleButton } from "../../components"
 
+// Interfaces
+
+// Hooks
+import { useMessage } from "@hooks";
+
+// Layouts
+import { AuthCardLayout, AuthLayout } from "../../layout"
+
+// Styles
+import { LoginPageStyle as styles } from "../../styles";
+
+// Formik
+import { logInFields, logInSchema } from "../../formik"
 
 
 export const LoginPage = () => {

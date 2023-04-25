@@ -1,4 +1,14 @@
+// React Libraries
 import { Navigate, Route, Routes } from "react-router-dom"
+
+// Third Party Libraries
+
+// Components
+
+// Interfaces
+
+// Hooks
+
 
 export const PrivateRouter = () => {
 

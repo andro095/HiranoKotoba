@@ -1,18 +1,21 @@
-// Librerias de React
+// React Libraries
 
-// Librerias de Terceros
+// Third Party Libraries
 import { ProgressBar } from "primereact/progressbar";
 import { ProgressSpinner } from "primereact/progressspinner";
 
-// Archivos propios
-import { CardHeaderProps } from "../../../interfaces"
-import { BackArrow } from "../../../components";
+// Components
+import { BackArrow } from "@components";
+
+// Interfaces
+import { CardHeaderProps } from "@interfaces";
+
+// Hooks
+import { useBreakpoints } from "@hooks";
+
+// Styles
 import { CardHeaderStyle as styles } from "../styles";
 
-// Funcionalidad
-import { useBreakpoints } from "../../../hooks";
-
-// Assets
 
 
 export const CardHeader = ( { isSubmitting, hasBackArrow } : CardHeaderProps ) => {
