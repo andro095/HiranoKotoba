@@ -15,5 +15,5 @@ export interface AuthState {
     status: AuthStatus;
     user: UserInterface | null;
     errorType: AuthResponseEnum | null;
-    responseMessage: string | null;
+    confirmationEmailSent: boolean;
 }

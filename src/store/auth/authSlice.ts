@@ -17,7 +17,7 @@ const initialState: AuthState = {
     status: AuthStatus.NotAuthenticated,
     user: null,
     errorType: null,
-    responseMessage: null
+    confirmationEmailSent: false
 }
 
 export const authSlice = createSlice({
@@ -28,14 +28,14 @@ export const authSlice = createSlice({
             state.status = AuthStatus.Authenticated;
             state.user = payload;
             state.errorType = null;
-            state.responseMessage = null;
+            state.confirmationEmailSent = false;
         },
 
         logout: (state, { payload }) => {
             state.status = AuthStatus.NotAuthenticated;
             state.user = null;
             state.errorType = payload?.errorMessage;
-            state.responseMessage = null;
+            state.confirmationEmailSent = false;
         },
 
         checkingCredentials: ( state ) => {
@@ -44,8 +44,16 @@ export const authSlice = createSlice({
 
         cleanErrors: ( state ) => {
             state.errorType = null;
+        },
+
+        resetConfirmationEmailSent: ( state ) => {
+            state.confirmationEmailSent = false;
+        },
+
+        confirmEmailSent: ( state ) => {
+            state.confirmationEmailSent = true;
         }
     }
 });
 
-export const { login, logout, checkingCredentials, cleanErrors } = authSlice.actions;
+export const { login, logout, checkingCredentials, cleanErrors, resetConfirmationEmailSent, confirmEmailSent } = authSlice.actions;

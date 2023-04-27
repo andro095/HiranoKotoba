@@ -7,4 +7,5 @@ export enum AuthResponseEnum {
     UserUnconfirmed,
     ErrorSendingConfirmationEmail,
     EmailAlreadyInUse,
+    SuccessSendingConfirmationEmail,
 }

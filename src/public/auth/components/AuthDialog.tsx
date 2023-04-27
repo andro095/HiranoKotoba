@@ -28,7 +28,7 @@ import { AuthDialogStyle as styles } from "../styles";
 
 export const AuthDialog = ( { dialogTitle, setSubmitting } : AuthDialogProps ) => {
 
-    const [visible, setVisible] = useState<boolean>(true);
+    const [visible, setVisible] = useState<boolean>(false);
 
     const dispatch = useAppDispatch();
 
@@ -42,25 +42,26 @@ export const AuthDialog = ( { dialogTitle, setSubmitting } : AuthDialogProps ) =
     
     const handleOnHide = () => {
         setVisible(false);
-        dispatch( cleanErrors() );
+        cleanErrors();
     }
 
     const handleSendConfirmationEmail = () => {
         setVisible(false);
 
-        dispatch( cleanErrors() );
+        cleanErrors();
 
-        setSubmitting(true);
+        if (setSubmitting) setSubmitting(true);
+
 
         dispatch( startSendConfirmationEmail(user?.email) );
 
-        setSubmitting(false);
+        if (setSubmitting) setSubmitting(false);
     }
 
     const footer = (
         <div>
             <Button 
-                label={ formatMessage('ok') } 
+                label={ formatMessage('ok', 'Ok') } 
                 icon="pi pi-check" 
                 onClick={ handleOnHide }
                 text={ errorType == AuthResponseEnum.UserUnconfirmed }
@@ -69,7 +70,7 @@ export const AuthDialog = ( { dialogTitle, setSubmitting } : AuthDialogProps ) =
             {
                 errorType == AuthResponseEnum.UserUnconfirmed && (
                     <Button 
-                        label={ formatMessage('logIn.resendConfirmationEmail') }
+                        label={ formatMessage('logIn.resendConfirmationEmail', 'Reenviar correo') }
                         icon="pi pi-envelope"
                         onClick={ handleSendConfirmationEmail }
                         autoFocus
@@ -88,7 +89,7 @@ export const AuthDialog = ( { dialogTitle, setSubmitting } : AuthDialogProps ) =
             css={ styles.card }
         >
             <p>
-                { formatMessage(`errorTypes.auth.${errorTypes[errorType as AuthResponseEnum]}`)}
+                { formatMessage(`errorTypes.auth.${errorTypes[errorType as AuthResponseEnum]}`, 'Error en la autenticación')}
             </p>
         </Dialog>
     )

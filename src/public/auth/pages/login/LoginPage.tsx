@@ -6,7 +6,7 @@ import { useFormik } from "formik"
 
 // Components
 import { MInputText, MPassword, MSubmitButton } from "@components";
-import { AuthDialog, GoogleButton } from "../../components"
+import { GoogleButton } from "../../components"
 
 // Interfaces
 
@@ -49,15 +49,14 @@ export const LoginPage = () => {
     }
 
     return (
-        <AuthLayout>
+        <AuthLayout
+            hasDialog
+            dialogTitle={ formatMessage('login.error', 'Error al iniciar sesión')}
+        >
             <AuthCardLayout
                 title={formatMessage('login.title', 'Iniciar Sesión')}
                 isSubmitting={formik.isSubmitting}
             >
-                <AuthDialog
-                    dialogTitle="Error al iniciar sesión"
-                    setSubmitting={formik.setSubmitting}
-                />
                 <div
                     className="w-full"
                 >

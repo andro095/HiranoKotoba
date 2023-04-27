@@ -42,6 +42,7 @@ type Dialog = WithDialog | WithoutDialog;
 interface OtherProps {
     children: ReactNode;
     hasSnackbar?: boolean;
+    setSubmitting?: (isSubmitting: boolean) => void;
 }
 
 export type AuthLayoutProps = OtherProps & Stepper & Dialog;

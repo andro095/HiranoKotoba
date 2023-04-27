@@ -153,7 +153,10 @@
         "google": "Ingresar con Google",
         "newUser": "¿No tienes una cuenta? Registrate",
         "forgotPassword": "He olvidado mi contraseña",
-        "resendConfirmationEmail": "Reenviar correo"
+        "resendConfirmationEmail": "Reenviar correo",
+        "resendConfirmationEmailSummary": "Correo enviado",
+        "resendConfirmationEmailDetail": "Correo reenviado con éxito. Por favor revise su bandeja de entrada.",
+        "error": "Error al iniciar sesión"
     },
     "errorTypes": {
         "auth": {
@@ -165,6 +168,5 @@
             "errorSendingConfirmationEmail": "Error al enviar el email de confirmación, por favor intente más tarde",
             "emailAlreadyInUse": "El correo electrónico ya está en uso"
         }
-    },
-    "test": "Prueba"
+    }
 }

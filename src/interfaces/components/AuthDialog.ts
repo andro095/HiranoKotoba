@@ -1,4 +1,4 @@
 export interface AuthDialogProps {
-    dialogTitle: string;
-    setSubmitting: (submitting: boolean) => void;
+    dialogTitle?: string;
+    setSubmitting?: (submitting: boolean) => void;
 }
