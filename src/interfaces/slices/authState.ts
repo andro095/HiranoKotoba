@@ -6,7 +6,7 @@
 import { UserInterface } from "../models";
 
 // Enums
-import { AuthStatus } from "@enums";
+import { AuthResponseEnum, AuthStatus } from "@enums";
 
 // Hooks
 
@@ -14,5 +14,6 @@ import { AuthStatus } from "@enums";
 export interface AuthState {
     status: AuthStatus;
     user: UserInterface | null;
-    errorMessage: string | null;
+    errorType: AuthResponseEnum | null;
+    responseMessage: string | null;
 }

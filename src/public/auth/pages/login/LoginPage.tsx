@@ -6,7 +6,7 @@ import { useFormik } from "formik"
 
 // Components
 import { MInputText, MPassword, MSubmitButton } from "@components";
-import { GoogleButton } from "../../components"
+import { AuthDialog, GoogleButton } from "../../components"
 
 // Interfaces
 
@@ -54,6 +54,10 @@ export const LoginPage = () => {
                 title={formatMessage('login.title', 'Iniciar Sesión')}
                 isSubmitting={formik.isSubmitting}
             >
+                <AuthDialog
+                    dialogTitle="Error al iniciar sesión"
+                    setSubmitting={formik.setSubmitting}
+                />
                 <div
                     className="w-full"
                 >
@@ -62,7 +66,7 @@ export const LoginPage = () => {
                         onSubmit={formik.handleSubmit}
                     >
                         <div
-                            className="w-full flex flex-column gap-4"
+                            className="w-full flex flex-column gap-4 mt-2"
                         >
                             <MInputText
                                 name="email"

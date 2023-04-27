@@ -5,3 +5,9 @@ export const startLoginWithEmailPassword = (email: string, password: string) => 
         
     }
 }
+
+export const startSendConfirmationEmail = (email?: string) => {
+    return async( dispatch: any ) => {
+        
+    }
+}

@@ -141,6 +141,7 @@
         "rotateRight": "Girar derecha",
         "rotateLeft": "Girar izquierda"
     },
+    "ok": "Ok",
     "logIn": {
         "title": "Iniciar sesión",
         "invalidEmail": "Correo electrónico no válido",
@@ -151,6 +152,19 @@
         "submit": "Ingresar",
         "google": "Ingresar con Google",
         "newUser": "¿No tienes una cuenta? Registrate",
-        "forgotPassword": "He olvidado mi contraseña"
-    }
+        "forgotPassword": "He olvidado mi contraseña",
+        "resendConfirmationEmail": "Reenviar correo"
+    },
+    "errorTypes": {
+        "auth": {
+            "wrongPassword": "La contraseña ingresada es incorrecta.",
+            "emailNotFound": "El correo electrónico ingresado no existe.",
+            "tooManyRequests": "Demasiados intentos fallidos, intente más tarde.",
+            "networkRequestFailed": "Error de conexión, intente más tarde",
+            "userUnconfirmed": "El usuario no ha sido confirmado",
+            "errorSendingConfirmationEmail": "Error al enviar el email de confirmación, por favor intente más tarde",
+            "emailAlreadyInUse": "El correo electrónico ya está en uso"
+        }
+    },
+    "test": "Prueba"
 }

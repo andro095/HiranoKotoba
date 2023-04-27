@@ -1,17 +1,17 @@
 // React Libraries
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { IntlProvider } from 'react-intl';
 
 // Third Party Libraries
 import { locale } from "primereact/api";
+import { flatten } from 'flat';
 
 // Components
 
 // Interfaces
-import { RootState } from '@interfaces';
 
 // Hooks
+import { useAppSelector } from '@hooks';
 
 // Router
 import { AppRouter } from '@router';
@@ -22,7 +22,8 @@ import { locales } from '@locale';
 
 function App() {
 
-  const { language } = useSelector(( state: RootState ) => state.config);
+  const { language } = useAppSelector( state => state.config );
+
 
   useEffect(() => {
 
@@ -35,7 +36,7 @@ function App() {
     <IntlProvider
       defaultLocale='es'
       locale={language}
-      messages={locales[language]}
+      messages={flatten(locales[language])}
     >
       <AppRouter />
     </IntlProvider>

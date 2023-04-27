@@ -16,7 +16,8 @@ const initialState: AuthState = {
     // Change this to checking
     status: AuthStatus.NotAuthenticated,
     user: null,
-    errorMessage: null,
+    errorType: null,
+    responseMessage: null
 }
 
 export const authSlice = createSlice({
@@ -26,17 +27,25 @@ export const authSlice = createSlice({
         login: (state, { payload }) => {
             state.status = AuthStatus.Authenticated;
             state.user = payload;
-            state.errorMessage = null;
+            state.errorType = null;
+            state.responseMessage = null;
         },
+
         logout: (state, { payload }) => {
             state.status = AuthStatus.NotAuthenticated;
             state.user = null;
-            state.errorMessage = payload?.errorMessage;
+            state.errorType = payload?.errorMessage;
+            state.responseMessage = null;
         },
+
         checkingCredentials: ( state ) => {
             state.status = AuthStatus.Checking;
+        },
+
+        cleanErrors: ( state ) => {
+            state.errorType = null;
         }
     }
 });
 
-export const { login, logout, checkingCredentials } = authSlice.actions;
+export const { login, logout, checkingCredentials, cleanErrors } = authSlice.actions;
