@@ -142,11 +142,15 @@
         "rotateLeft": "Girar izquierda"
     },
     "ok": "Ok",
+    "auth": {
+        "invalidEmail": "Ingrese un correo válido",
+        "requiredEmail": "Ingrese un correo",
+        "requiredPassword": "Ingrese una contraseña",
+        "email": "Correo electrónico",
+        "password": "Contraseña"
+    },
     "logIn": {
         "title": "Iniciar sesión",
-        "invalidEmail": "Correo electrónico no válido",
-        "requiredEmail": "Correo electrónico requerido",
-        "requiredPassword": "Contraseña requerida",
         "email": "Correo electrónico",
         "password": "Contraseña",
         "submit": "Ingresar",
@@ -157,6 +161,19 @@
         "resendConfirmationEmailSummary": "Correo enviado",
         "resendConfirmationEmailDetail": "Correo reenviado con éxito. Por favor revise su bandeja de entrada.",
         "error": "Error al iniciar sesión"
+    },
+    "register":{
+        "title": "Nuevo usuario",
+        "dialogTitle": "Error al registrar tu cuenta",
+        "steps": {
+            "step1": "Datos",
+            "step2": "Confirmación"
+        },
+        "passwordFormat": "La contraseña debe tener al menos 8 caracteres y debe incluir por lo menos mayúsculas, minúsculas y números",
+        "requiredConfirmPassword": "Confirme su contraseña",
+        "passwordsDontMatch": "Las contraseñas no coinciden",
+        "requiredName": "Ingrese su nombre",
+        "requiredLastName": "Ingrese su apellido"
     },
     "errorTypes": {
         "auth": {

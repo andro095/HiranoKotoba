@@ -51,7 +51,7 @@ export const LoginPage = () => {
     return (
         <AuthLayout
             hasDialog
-            dialogTitle={ formatMessage('login.error', 'Error al iniciar sesión')}
+            dialogTitle={formatMessage('login.error', 'Error al iniciar sesión')}
         >
             <AuthCardLayout
                 title={formatMessage('login.title', 'Iniciar Sesión')}
