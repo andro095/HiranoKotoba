@@ -15,7 +15,7 @@ import { AuthCardLayoutProps } from '@interfaces';
 import { AuthCardLayoutStyle as styles } from "../styles";
         
 
-export const AuthCardLayout = ( { title, hasBackArrow = false, isSubmitting = false, children } : AuthCardLayoutProps ) => {
+export const AuthCardLayout = ( { title, hasBackArrow = false, isSubmitting = false, bigCard = false, children } : AuthCardLayoutProps ) => {
     
     return (
         <div
@@ -25,7 +25,7 @@ export const AuthCardLayout = ( { title, hasBackArrow = false, isSubmitting = fa
                 className="overflow-hidden w-full"
                 header={ <CardHeader hasBackArrow={hasBackArrow} isSubmitting={isSubmitting} /> }
                 title={ <CardTitle title={title} hasBackArrow={hasBackArrow} /> }
-                css={ styles.card }
+                css={ styles.card(bigCard) }
             >
                 { children }
             </Card>

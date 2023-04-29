@@ -70,7 +70,7 @@ export const AuthDialog = ( { dialogTitle, setSubmitting } : AuthDialogProps ) =
             {
                 errorType == AuthResponseEnum.UserUnconfirmed && (
                     <Button 
-                        label={ formatMessage('logIn.resendConfirmationEmail', 'Reenviar correo') }
+                        label={ formatMessage('auth.resendConfirmationEmail', 'Reenviar correo') }
                         icon="pi pi-envelope"
                         onClick={ handleSendConfirmationEmail }
                         autoFocus

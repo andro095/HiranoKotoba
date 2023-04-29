@@ -18,7 +18,7 @@ import Logo from '@assets/logo.png';
 
 export const AuthLayout = ( { hasStepper = false, hasDialog = false, steps = [{}, {}], activeIndex, dialogTitle, hasSnackbar, children, setSubmitting } : AuthLayoutProps ) => {
     return (
-        <div className='w-full surface-ground h-full flex align-items-center flex-column'>
+        <div className='w-full flex align-items-center flex-column pb-4'>
             {
                 hasDialog && (
                     <AuthDialog

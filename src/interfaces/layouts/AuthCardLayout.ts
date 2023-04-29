@@ -9,6 +9,7 @@ import { ReactNode } from "react";
 
 
 export interface AuthCardLayoutProps {
+    bigCard?: boolean;
     children: ReactNode;
     hasBackArrow?: boolean;
     isSubmitting?: boolean;

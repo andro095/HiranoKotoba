@@ -12,9 +12,9 @@ import { imp, mq } from "@theme";
 
 
 export const AuthCardLayoutStyle = {
-    card: css({
+    card: (bigCard : boolean) => css({
         [mq.sm]: {
-            width: "25rem" + imp,
+            width: ( bigCard? "30rem" : "25rem" ) + imp,
         }
     }),
 }

@@ -2,8 +2,10 @@
 
 // Third Party Libraries
 import { useFormik } from "formik"
+import classNames from "classnames"
 
 // Components
+import { MInputText, MPassword, MSubmitButton } from "@components"
 
 // Interfaces
 
@@ -15,9 +17,9 @@ import { AuthCardLayout, AuthLayout } from "../../layout"
 
 // Constants
 import { registerSteps } from "../../constants"
+
+// Formik
 import { registerFields, registerSchema } from "../../formik"
-import { MInputText, MPassword, MSubmitButton } from "@components"
-import classNames from "classnames"
 
 export const RegisterStep1Page = () => {
 
@@ -48,13 +50,13 @@ export const RegisterStep1Page = () => {
         <AuthLayout
             hasDialog
             hasStepper
-            hasSnackbar
             activeIndex={0}
             steps={registerSteps(formatMessage)}
             dialogTitle={formatMessage('register.dialogTitle', 'Error al registrar tu cuenta')}
         >
             <AuthCardLayout
                 hasBackArrow
+                bigCard
                 isSubmitting={formik.isSubmitting}
                 title={formatMessage('register.title', 'Nuevo usuario')}
             >

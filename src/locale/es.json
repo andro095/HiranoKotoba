@@ -147,7 +147,8 @@
         "requiredEmail": "Ingrese un correo",
         "requiredPassword": "Ingrese una contraseña",
         "email": "Correo electrónico",
-        "password": "Contraseña"
+        "password": "Contraseña",
+        "resendConfirmationEmail": "Reenviar el correo"
     },
     "logIn": {
         "title": "Iniciar sesión",
@@ -155,13 +156,13 @@
         "google": "Ingresar con Google",
         "newUser": "¿No tienes una cuenta? Registrate",
         "forgotPassword": "He olvidado mi contraseña",
-        "resendConfirmationEmail": "Reenviar correo",
         "resendConfirmationEmailSummary": "Correo enviado",
         "resendConfirmationEmailDetail": "Correo reenviado con éxito. Por favor revise su bandeja de entrada.",
         "error": "Error al iniciar sesión"
     },
     "register":{
         "title": "Nuevo usuario",
+        "secondTitle": "Confirma",
         "dialogTitle": "Error al registrar tu cuenta",
         "steps": {
             "step1": "Datos",
@@ -175,7 +176,9 @@
         "name": "Nombres",
         "lastName": "Apellidos",
         "confirmPassword": "Confirmar contraseña",
-        "submit": "Continuar"
+        "submit": "Continuar",
+        "confirmationEmailSent": "Se ha enviado un correo de confirmación a:",
+        "confirmationEmailSent2": "Por favor, revisa tu bandeja de entrada y sigue las instrucciones para completar el registro."
     },
     "errorTypes": {
         "auth": {
