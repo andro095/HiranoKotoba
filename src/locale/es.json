@@ -151,8 +151,6 @@
     },
     "logIn": {
         "title": "Iniciar sesión",
-        "email": "Correo electrónico",
-        "password": "Contraseña",
         "submit": "Ingresar",
         "google": "Ingresar con Google",
         "newUser": "¿No tienes una cuenta? Registrate",
@@ -173,7 +171,11 @@
         "requiredConfirmPassword": "Confirme su contraseña",
         "passwordsDontMatch": "Las contraseñas no coinciden",
         "requiredName": "Ingrese su nombre",
-        "requiredLastName": "Ingrese su apellido"
+        "requiredLastName": "Ingrese su apellido",
+        "name": "Nombres",
+        "lastName": "Apellidos",
+        "confirmPassword": "Confirmar contraseña",
+        "submit": "Continuar"
     },
     "errorTypes": {
         "auth": {

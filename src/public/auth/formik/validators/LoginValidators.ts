@@ -12,7 +12,7 @@ import { FormatMessage } from '@interfaces';
 export const logInSchema = (formatMessage : FormatMessage) => Yup.object().shape({
     email: Yup.string()
         .email(formatMessage('auth.invalidEmail', 'Ingrese un correo válido'))
-        .required(formatMessage('auth.requiredEmail', 'Correo electrónico requerido')),
+        .required(formatMessage('auth.requiredEmail', 'Ingrese un correo')),
     password: Yup.string()
         .required(formatMessage('auth.requiredPassword', 'Ingrese una contraseña'))
 });

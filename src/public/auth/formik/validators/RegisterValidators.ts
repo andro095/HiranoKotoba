@@ -24,6 +24,6 @@ export const registerSchema = (formatMessage : FormatMessage) => Yup.object().sh
         .oneOf([Yup.ref('password')], formatMessage('register.passwordsDontMatch', 'Las contraseñas no coinciden')),
     name: Yup.string()
         .required(formatMessage('register.requiredName', 'Ingrese su nombre')),
-    lastName: Yup.string()
+    lastname: Yup.string()
         .required(formatMessage('register.requiredLastName', 'Ingrese su apellido')),
 })

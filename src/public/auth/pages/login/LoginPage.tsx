@@ -21,11 +21,13 @@ import { LoginPageStyle as styles } from "../../styles";
 
 // Formik
 import { logInFields, logInSchema } from "../../formik"
+import { useNavigate } from "react-router-dom";
 
 
 export const LoginPage = () => {
 
-    const formatMessage = useMessage()
+    const formatMessage = useMessage();
+    const navigate = useNavigate();
 
     const formik = useFormik({
         initialValues: logInFields,
@@ -41,11 +43,11 @@ export const LoginPage = () => {
     })
 
     const goToRegister = () => {
-        console.log('Go to register')
+        navigate('/auth/register/step1')
     }
 
     const goToForgotPassword = () => {
-        console.log('Go to forgot password')
+        navigate('/auth/reset/step1')
     }
 
     return (
@@ -65,18 +67,18 @@ export const LoginPage = () => {
                         onSubmit={formik.handleSubmit}
                     >
                         <div
-                            className="w-full flex flex-column gap-4 mt-2"
+                            className="w-full flex flex-column gap-3"
                         >
                             <MInputText
                                 name="email"
-                                label={ formatMessage('login.email', 'Correo electrónico') }
+                                label={ formatMessage('auth.email', 'Correo electrónico') }
                                 type="email"
                                 formik={formik}
                             />
 
                             <MPassword 
                                 name="password"
-                                label={ formatMessage('login.password', 'Contraseña') }
+                                label={ formatMessage('auth.password', 'Contraseña') }
                                 formik={formik}
                             />
                         </div>

@@ -13,7 +13,7 @@ import { MInputTextProps } from '@interfaces';
 import { useBreakpoints } from '@hooks';
       
 
-export const MInputText = ({ name, label, type, className, css, formik } : MInputTextProps) => {
+export const MInputText = ({ name, label, type = "text", className, css, formik } : MInputTextProps) => {
     
     const { isXs, isSm, isMd, isLg, isXl } = useBreakpoints();
 
