@@ -1,5 +1,6 @@
 // React Libraries
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // Third Party Libraries
 import { Button } from "primereact/button";
@@ -25,12 +26,17 @@ export const RegisterStep2Page = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const { isXs, isSm } = useBreakpoints();
-
+    const location = useLocation();
+    const navigate = useNavigate();
     const formatMessage = useMessage();
 
-    const email = 'abc@gmail.com'
+    const email : string = location.state?.email;
 
-    // TODO: Terminar de implementar la página.
+    useEffect(() => {
+        if (!email) {
+            navigate('/auth/login');
+        }
+    }, [])
 
     const onClick = () => {
         setIsSubmitting(true);

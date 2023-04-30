@@ -20,11 +20,13 @@ import { registerSteps } from "../../constants"
 
 // Formik
 import { registerFields, registerSchema } from "../../formik"
+import { useNavigate } from "react-router-dom"
 
 export const RegisterStep1Page = () => {
 
     const formatMessage = useMessage();
     const { isXs, isSm } = useBreakpoints();
+    const navigate = useNavigate();
 
     const twoColumnsStyle = classNames(
         'w-full flex gap-1',
@@ -40,9 +42,11 @@ export const RegisterStep1Page = () => {
             console.log(values)
 
             setTimeout(() => {
-                setSubmitting(false)
+                setSubmitting(false);
+                navigate('/auth/register/step2', { state: { email: values.email } })
             }, 2000);
             // setSubmitting(false)
+            // navigate('/auth/register/step2', { state: { email: values.email } })
         },
     })
 

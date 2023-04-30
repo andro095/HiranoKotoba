@@ -148,7 +148,10 @@
         "requiredPassword": "Ingrese una contraseña",
         "email": "Correo electrónico",
         "password": "Contraseña",
-        "resendConfirmationEmail": "Reenviar el correo"
+        "resendConfirmationEmail": "Reenviar el correo",
+        "passwordFormat": "La contraseña debe tener al menos 8 caracteres y debe incluir por lo menos mayúsculas, minúsculas y números",
+        "requiredConfirmPassword": "Confirme su contraseña",
+        "passwordsDontMatch": "Las contraseñas no coinciden"
     },
     "logIn": {
         "title": "Iniciar sesión",
@@ -167,10 +170,7 @@
         "steps": {
             "step1": "Datos",
             "step2": "Confirmación"
-        },
-        "passwordFormat": "La contraseña debe tener al menos 8 caracteres y debe incluir por lo menos mayúsculas, minúsculas y números",
-        "requiredConfirmPassword": "Confirme su contraseña",
-        "passwordsDontMatch": "Las contraseñas no coinciden",
+        },        
         "requiredName": "Ingrese su nombre",
         "requiredLastName": "Ingrese su apellido",
         "name": "Nombres",
@@ -179,6 +179,24 @@
         "submit": "Continuar",
         "confirmationEmailSent": "Se ha enviado un correo de confirmación a:",
         "confirmationEmailSent2": "Por favor, revisa tu bandeja de entrada y sigue las instrucciones para completar el registro."
+    },
+    "reset":{
+        "steps":{
+            "step1": "Correo",
+            "step2": "Revisa",
+            "step3": "Nueva contraseña",
+            "step4": "Contraseña restablecida"
+        },
+        "dialogTitle": {
+            "step1": "Error al enviar el correo",
+            "step3": "Error al restablecer la contraseña"
+        },
+        "title": {
+            "step1": "Restablecer contraseña",
+            "step2": "Correo enviado",
+            "step3": "Contraseña nueva",
+            "step4": "Contraseña restablecida"
+        }
     },
     "errorTypes": {
         "auth": {
