@@ -196,7 +196,8 @@
             "step2": "Correo enviado",
             "step3": "Contraseña nueva",
             "step4": "Contraseña restablecida"
-        }
+        },
+        "send": "Enviar correo"
     },
     "errorTypes": {
         "auth": {

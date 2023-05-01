@@ -1,8 +1,11 @@
 // React Libraries
 
 // Third Party Libraries
+import { useFormik } from "formik";
+import { Button } from "primereact/button";
 
 // Components
+import { MInputText } from "@components";
 
 // Interfaces
 
@@ -14,7 +17,8 @@ import { AuthCardLayout, AuthLayout } from "../../layout";
 
 // Constants
 import { resetSteps } from "../../constants";
-import { useFormik } from "formik";
+
+// Formik
 import { resetStep1Fields, resetStep1Schema } from "../../formik";
 
 export const ResetStep1Page = () => {
@@ -29,7 +33,9 @@ export const ResetStep1Page = () => {
         },
     });
 
-    // TODO: Agregar campos del formulario y funcionalidad
+    const onClick = () => {
+        console.log('click');
+    }
 
     return (
         <AuthLayout
@@ -44,7 +50,22 @@ export const ResetStep1Page = () => {
                 title={formatMessage('reset.title.step1', 'Restablecer contraseña')}
                 isSubmitting={formik.isSubmitting}
             >
+                <form
+                    className="w-full flex flex-column align-items-center gap-3"
+                    onSubmit={formik.handleSubmit}
+                >
+                    <MInputText 
+                        label={ formatMessage('auth.email', 'Correo electrónico') }
+                        name="email"
+                        type="email"
+                        formik={formik}
+                    />
 
+                    <Button 
+                        label={ formatMessage('reset.send', 'Enviar correo') }
+                        onClick={ onClick }
+                    />
+                </form>
             </AuthCardLayout>
         </AuthLayout>
     )

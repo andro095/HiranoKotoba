@@ -4,3 +4,4 @@ export * from './AuthDialog';
 export * from './CardHeader';
 export * from './CardTitle';
 export * from './GoogleButton';
+export * from './MobileStepper';

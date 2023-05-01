@@ -5,18 +5,22 @@ import { Image } from 'primereact/image';
 import { Steps } from 'primereact/steps';
 
 // Components
-import { AuthDialog, AuthToast } from '../components';
+import { AuthDialog, AuthToast, MobileStepper } from '../components';
 
 // Interfaces
 import { AuthLayoutProps } from '@interfaces';
 
 // Hooks
+import { useBreakpoints } from '@hooks';
 
 // Assets
 import Logo from '@assets/logo.png';
 
 
-export const AuthLayout = ( { hasStepper = false, hasDialog = false, steps = [{}, {}], activeIndex, dialogTitle, hasSnackbar, children, setSubmitting } : AuthLayoutProps ) => {
+export const AuthLayout = ( { hasStepper = false, hasDialog = false, steps = [{}, {}], activeIndex = 0, dialogTitle, hasSnackbar, children, setSubmitting } : AuthLayoutProps ) => {
+
+    const { isXs } = useBreakpoints();
+
     return (
         <div className='w-full flex align-items-center flex-column pb-4'>
             {
@@ -36,9 +40,17 @@ export const AuthLayout = ( { hasStepper = false, hasDialog = false, steps = [{}
             </div>
             {
                 hasStepper && (
-                    <div className='w-11 md:w-9 lg:w-7 xl:w-5 mb-5'>
-                        <Steps model={steps} activeIndex={activeIndex} className='py-0'/>
-                    </div>
+                    isXs ? (
+                        <MobileStepper 
+                            activeStep={activeIndex + 1}
+                            label={steps[activeIndex].label}
+                            stepsLength={steps.length}
+                        />
+                    ) : (
+                        <div className='w-11 md:w-9 lg:w-7 xl:w-5 mb-5'>
+                            <Steps model={steps} activeIndex={activeIndex} className='py-0'/>
+                        </div>
+                    )
                 )
             }
             { children }
