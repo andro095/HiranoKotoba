@@ -8,14 +8,18 @@ import { ErrorTypes } from "@interfaces";
 // Hooks
 
 // Enums
-import { AuthResponseEnum } from "@enums";
+import { AuthResponseEnum as error } from "@enums";
 
 export const errorTypes : ErrorTypes = {
-    [AuthResponseEnum.WrongPassword]: 'wrongPassword',
-    [AuthResponseEnum.EmailNotFound]: 'emailNotFound',
-    [AuthResponseEnum.TooManyRequests]: 'tooManyRequests',
-    [AuthResponseEnum.NetworkRequestFailed]: 'networkRequestFailed',
-    [AuthResponseEnum.UserUnconfirmed]: 'userUnconfirmed',
-    [AuthResponseEnum.ErrorSendingConfirmationEmail]: 'errorSendingConfirmationEmail',
-    [AuthResponseEnum.EmailAlreadyInUse]: 'emailAlreadyInUse',
+    [error.WrongPassword]: 'wrongPassword',
+    [error.EmailNotFound]: 'emailNotFound',
+    [error.TooManyRequests]: 'tooManyRequests',
+    [error.NetworkRequestFailed]: 'networkRequestFailed',
+    [error.UserUnconfirmed]: 'userUnconfirmed',
+    [error.ErrorSendingConfirmationEmail]: 'errorSendingConfirmationEmail',
+    [error.EmailAlreadyInUse]: 'emailAlreadyInUse',
+    [error.ErrorLogIn]: 'errorLogIn',
+    [error.ErrorRegister]: 'errorRegister',
+    [error.ErrorSendPasswordResetEmail]: 'errorSendPasswordResetEmail',
+    [error.ErrorSendingNewPassword]: 'errorSendingNewPassword',
 }

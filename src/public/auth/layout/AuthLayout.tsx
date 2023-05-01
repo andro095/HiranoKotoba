@@ -22,7 +22,7 @@ export const AuthLayout = ( { hasStepper = false, hasDialog = false, steps = [{}
     const { isXs } = useBreakpoints();
 
     return (
-        <div className='w-full flex align-items-center flex-column pb-4'>
+        <div className='w-full surface-ground flex align-items-center flex-column pb-4'>
             {
                 hasDialog && (
                     <AuthDialog

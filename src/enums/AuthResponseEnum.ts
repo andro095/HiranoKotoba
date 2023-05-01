@@ -8,4 +8,8 @@ export enum AuthResponseEnum {
     ErrorSendingConfirmationEmail,
     EmailAlreadyInUse,
     SuccessSendingConfirmationEmail,
+    ErrorLogIn,
+    ErrorRegister,
+    ErrorSendPasswordResetEmail,
+    ErrorSendingNewPassword,
 }

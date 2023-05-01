@@ -1,4 +1,5 @@
 // React Libraries
+import { useNavigate } from "react-router-dom";
 
 // Third Party Libraries
 import { useFormik } from "formik";
@@ -24,12 +25,18 @@ import { resetStep1Fields, resetStep1Schema } from "../../formik";
 export const ResetStep1Page = () => {
 
     const formatMessage = useMessage();
+    const navigate = useNavigate();
 
     const formik = useFormik({
         initialValues: resetStep1Fields,
         validationSchema: resetStep1Schema(formatMessage),
-        onSubmit: (values) => {
+        onSubmit: (values, { setSubmitting }) => {
             console.log(values);
+
+            setTimeout(() => {
+                setSubmitting(false);
+                navigate('/auth/reset/step2', { state: { email: values.email } })
+            }, 2000);
         },
     });
 

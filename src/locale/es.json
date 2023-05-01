@@ -207,7 +207,11 @@
             "networkRequestFailed": "Error de conexión, intente más tarde",
             "userUnconfirmed": "El usuario no ha sido confirmado",
             "errorSendingConfirmationEmail": "Error al enviar el email de confirmación, por favor intente más tarde",
-            "emailAlreadyInUse": "El correo electrónico ya está en uso"
+            "emailAlreadyInUse": "El correo electrónico ya está en uso",
+            "errorLogIn": "Ocurrió un error al iniciar sesión",
+            "errorRegister": "Ocurrió un error al registrar el usuario",
+            "errorSendPasswordResetEmail": "Ocurrió un error al enviar el correo de restablecimiento de contraseña",
+            "errorSendingNewPassword": "Ocurrió un error al enviar la nueva contraseña"
         }
     }
 }
