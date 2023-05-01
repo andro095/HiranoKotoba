@@ -148,6 +148,7 @@
         "requiredPassword": "Ingrese una contraseña",
         "email": "Correo electrónico",
         "password": "Contraseña",
+        "confirmPassword": "Confirmar contraseña",
         "resendConfirmationEmail": "Reenviar el correo",
         "passwordFormat": "La contraseña debe tener al menos 8 caracteres y debe incluir por lo menos mayúsculas, minúsculas y números",
         "requiredConfirmPassword": "Confirme su contraseña",
@@ -175,7 +176,6 @@
         "requiredLastName": "Ingrese su apellido",
         "name": "Nombres",
         "lastName": "Apellidos",
-        "confirmPassword": "Confirmar contraseña",
         "submit": "Continuar",
         "confirmationEmailSent": "Se ha enviado un correo de confirmación a:",
         "confirmationEmailSent2": "Por favor, revisa tu bandeja de entrada y sigue las instrucciones para completar el registro."
@@ -197,7 +197,11 @@
             "step3": "Contraseña nueva",
             "step4": "Contraseña restablecida"
         },
-        "send": "Enviar correo"
+        "send": "Enviar correo",
+        "emailSent": "Se ha enviado un correo a:",
+        "emailSent2": "Por favor, revisa tu bandeja de entrada y sigue las instrucciones para restablecer tu contraseña.",
+        "reset": "Restablecer contraseña",
+        "passwordReseted": "Tu contraseña ha sido restablecida con éxito. Puedes iniciar sesión con tu nueva contraseña."
     },
     "errorTypes": {
         "auth": {

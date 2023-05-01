@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import { Button } from "primereact/button";
 
 // Components
-import { MInputText } from "@components";
+import { MInputText, MSubmitButton } from "@components";
 
 // Interfaces
 
@@ -40,10 +40,6 @@ export const ResetStep1Page = () => {
         },
     });
 
-    const onClick = () => {
-        console.log('click');
-    }
-
     return (
         <AuthLayout
             hasDialog
@@ -68,9 +64,9 @@ export const ResetStep1Page = () => {
                         formik={formik}
                     />
 
-                    <Button 
+                    <MSubmitButton 
                         label={ formatMessage('reset.send', 'Enviar correo') }
-                        onClick={ onClick }
+                        formik={formik}
                     />
                 </form>
             </AuthCardLayout>
