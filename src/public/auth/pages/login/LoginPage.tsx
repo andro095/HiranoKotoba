@@ -1,4 +1,5 @@
 // React Libraries
+import { useNavigate } from "react-router-dom";
 
 // Third Party Libraries
 import { Button } from "primereact/button"
@@ -6,12 +7,12 @@ import { useFormik } from "formik"
 
 // Components
 import { MInputText, MPassword, MSubmitButton } from "@components";
-import { GoogleButton } from "../../components"
+import { AuthLoader, GoogleButton } from "../../components"
 
 // Interfaces
 
 // Hooks
-import { useMessage } from "@hooks";
+import { useCheckAuth, useMessage } from "@hooks";
 
 // Layouts
 import { AuthCardLayout, AuthLayout } from "../../layout"
@@ -21,13 +22,17 @@ import { LoginPageStyle as styles } from "../../styles";
 
 // Formik
 import { logInFields, logInSchema } from "../../formik"
-import { useNavigate } from "react-router-dom";
+
+// Enums
+import { AuthStatus } from "@enums";
 
 
 export const LoginPage = () => {
 
     const formatMessage = useMessage();
     const navigate = useNavigate();
+
+    const status = useCheckAuth();
 
     const formik = useFormik({
         initialValues: logInFields,
@@ -49,6 +54,15 @@ export const LoginPage = () => {
     const goToForgotPassword = () => {
         navigate('/auth/reset/step1')
     }
+
+    if (status === AuthStatus.Checking) {
+        return (
+            <AuthLayout>
+                <AuthLoader />
+            </AuthLayout>
+        )
+    }
+
 
     return (
         <AuthLayout

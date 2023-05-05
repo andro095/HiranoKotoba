@@ -22,4 +22,5 @@ export const errorTypes : ErrorTypes = {
     [error.ErrorRegister]: 'errorRegister',
     [error.ErrorSendPasswordResetEmail]: 'errorSendPasswordResetEmail',
     [error.ErrorSendingNewPassword]: 'errorSendingNewPassword',
+    [error.ErrorGoogleLogIn]: 'errorGoogleLogIn',
 }

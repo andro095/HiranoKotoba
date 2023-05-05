@@ -21,6 +21,8 @@
       "@assets/*": ["./src/assets/*"],
       "@components": ["./src/components"],
       "@enums": ["./src/enums"],
+      "@mfirebase": ["src/mfirebase"],
+      "@helpers": ["./src/helpers"],
       "@hooks": ["./src/hooks"],
       "@interfaces": ["./src/interfaces"],
       "@locale": ["./src/locale"],
@@ -28,7 +30,7 @@
       "@public": ["./src/public"],
       "@router": ["./src/router"],
       "@store": ["./src/store"],
-      "@theme": ["./src/theme"],
+      "@theme": ["./src/theme"]
     }
   },
   "include": ["src"],

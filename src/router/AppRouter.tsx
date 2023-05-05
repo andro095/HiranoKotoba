@@ -8,23 +8,24 @@ import { Route, Routes } from "react-router-dom";
 // Interfaces
 
 // Hooks
+import { useCheckAuth } from "@hooks";
 
 // Router
 import { PrivateRouter } from "@private";
 import { PublicRouter } from "@public";
 
+// Enums
+import { AuthStatus } from "@enums";
 
 
 export const AppRouter = () => {
     
-    // Hook to check if the user is authenticated
-    const status : string = 'not-authenticated';
-
+    const status = useCheckAuth();
 
     return (
         <Routes>
             {
-                status === 'authenticated' 
+                status === AuthStatus.Authenticated
                     ? <Route path='/*' element={ <PrivateRouter /> } />
                     : <Route path='/*' element={ <PublicRouter /> } />
             }

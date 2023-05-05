@@ -215,7 +215,8 @@
             "errorLogIn": "Ocurrió un error al iniciar sesión",
             "errorRegister": "Ocurrió un error al registrar el usuario",
             "errorSendPasswordResetEmail": "Ocurrió un error al enviar el correo de restablecimiento de contraseña",
-            "errorSendingNewPassword": "Ocurrió un error al enviar la nueva contraseña"
+            "errorSendingNewPassword": "Ocurrió un error al enviar la nueva contraseña",
+            "errorGoogleLogIn": "Ocurrió un error al iniciar sesión con Google"
         }
     }
 }

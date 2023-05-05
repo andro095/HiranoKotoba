@@ -12,4 +12,5 @@ export enum AuthResponseEnum {
     ErrorRegister,
     ErrorSendPasswordResetEmail,
     ErrorSendingNewPassword,
+    ErrorGoogleLogIn,
 }

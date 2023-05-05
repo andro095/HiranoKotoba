@@ -9,25 +9,29 @@ import { Button } from "primereact/button"
 // Interfaces
 
 // Hooks
-import { useBreakpoints, useMessage } from "@hooks";
+import { useAppDispatch, useBreakpoints, useMessage } from "@hooks";
+
+// Store
+import { startGoogleSignIn } from "@store";
 
 
 export const GoogleButton = () => {
 
     const [disabled, setDisabled] = useState(false);
 
+    const dispatch = useAppDispatch();
     const formatMessage = useMessage();
     const { isXs, isSm } = useBreakpoints();
 
-    // TODO: Implementar lógica de Google
+    // TODO: Implementar creación de usuario cuando se loguea con Google por primera vez
 
-    const onClick = () => {
+    const onClick = async() => {
 
         setDisabled(true);
 
-        setTimeout(() => {
-            setDisabled(false);
-        }, 2000);
+        dispatch( startGoogleSignIn() )
+
+        setDisabled(false);
 
     }
 
