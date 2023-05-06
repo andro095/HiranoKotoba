@@ -141,82 +141,90 @@
         "rotateRight": "Girar derecha",
         "rotateLeft": "Girar izquierda"
     },
+
+
+
     "ok": "Ok",
+    "photoPickerTitle": "Carga una foto de perfil",
+
+
+
     "auth": {
-        "invalidEmail": "Ingrese un correo válido",
-        "requiredEmail": "Ingrese un correo",
-        "requiredPassword": "Ingrese una contraseña",
-        "email": "Correo electrónico",
-        "password": "Contraseña",
         "confirmPassword": "Confirmar contraseña",
-        "resendConfirmationEmail": "Reenviar el correo",
+        "email": "Correo electrónico",
+        "invalidEmail": "Ingrese un correo válido",
+        "password": "Contraseña",
         "passwordFormat": "La contraseña debe tener al menos 8 caracteres y debe incluir por lo menos mayúsculas, minúsculas y números",
         "requiredConfirmPassword": "Confirme su contraseña",
-        "passwordsDontMatch": "Las contraseñas no coinciden"
+        "passwordsDontMatch": "Las contraseñas no coinciden",
+        "requiredEmail": "Ingrese un correo",
+        "requiredPassword": "Ingrese una contraseña",
+        "resendConfirmationEmail": "Reenviar el correo"
+    },
+    "errorTypes": {
+        "auth": {
+            "emailAlreadyInUse": "El correo electrónico ya está en uso",
+            "emailNotFound": "El correo electrónico ingresado no existe.",
+            "errorGoogleLogIn": "Ocurrió un error al iniciar sesión con Google",
+            "errorLogIn": "Ocurrió un error al iniciar sesión",
+            "errorRegister": "Ocurrió un error al registrar el usuario",
+            "errorSendingConfirmationEmail": "Error al enviar el email de confirmación, por favor intente más tarde",
+            "errorSendingNewPassword": "Ocurrió un error al enviar la nueva contraseña",
+            "errorSendPasswordResetEmail": "Ocurrió un error al enviar el correo de restablecimiento de contraseña",
+            "networkRequestFailed": "Error de conexión, intente más tarde",
+            "tooManyRequests": "Demasiados intentos fallidos, intente más tarde.",
+            "userUnconfirmed": "El usuario no ha sido confirmado",
+            "wrongPassword": "La contraseña ingresada es incorrecta."
+        }
     },
     "logIn": {
-        "title": "Iniciar sesión",
-        "submit": "Ingresar",
+        "error": "Error al iniciar sesión",
+        "forgotPassword": "He olvidado mi contraseña",
         "google": "Ingresar con Google",
         "newUser": "¿No tienes una cuenta? Registrate",
-        "forgotPassword": "He olvidado mi contraseña",
-        "resendConfirmationEmailSummary": "Correo enviado",
         "resendConfirmationEmailDetail": "Correo reenviado con éxito. Por favor revise su bandeja de entrada.",
-        "error": "Error al iniciar sesión"
+        "resendConfirmationEmailSummary": "Correo enviado",
+        "submit": "Ingresar",
+        "title": "Iniciar sesión"
     },
     "register":{
-        "title": "Nuevo usuario",
-        "secondTitle": "Confirma",
+        "confirmationEmailSent": "Se ha enviado un correo de confirmación a:",
+        "confirmationEmailSent2": "Por favor, revisa tu bandeja de entrada y sigue las instrucciones para completar el registro.",
         "dialogTitle": "Error al registrar tu cuenta",
+        "lastName": "Apellidos",
+        "name": "Nombres",
+        "requiredLastName": "Ingrese su apellido",
+        "requiredName": "Ingrese su nombre",
+        "secondTitle": "Confirma",
+        "submit": "Continuar",
+        "title": "Nuevo usuario",
         "steps": {
             "step1": "Datos",
             "step2": "Confirmación"
-        },        
-        "requiredName": "Ingrese su nombre",
-        "requiredLastName": "Ingrese su apellido",
-        "name": "Nombres",
-        "lastName": "Apellidos",
-        "submit": "Continuar",
-        "confirmationEmailSent": "Se ha enviado un correo de confirmación a:",
-        "confirmationEmailSent2": "Por favor, revisa tu bandeja de entrada y sigue las instrucciones para completar el registro."
+        }   
     },
-    "reset":{
+    "reset":{        
+        "emailSent": "Se ha enviado un correo a:",
+        "emailSent2": "Por favor, revisa tu bandeja de entrada y sigue las instrucciones para restablecer tu contraseña.",
+        "passwordReseted": "Tu contraseña ha sido restablecida con éxito. Puedes iniciar sesión con tu nueva contraseña.",
+        "reset": "Restablecer contraseña",
+        "send": "Enviar correo",
+        "dialogTitle": {
+            "step1": "Error al enviar el correo",
+            "step3": "Error al restablecer la contraseña"
+        },
         "steps":{
             "step1": "Correo",
             "step2": "Revisa",
             "step3": "Nueva contraseña",
             "step4": "Contraseña restablecida"
         },
-        "dialogTitle": {
-            "step1": "Error al enviar el correo",
-            "step3": "Error al restablecer la contraseña"
-        },
         "title": {
             "step1": "Restablecer contraseña",
             "step2": "Correo enviado",
             "step3": "Contraseña nueva",
             "step4": "Contraseña restablecida"
-        },
-        "send": "Enviar correo",
-        "emailSent": "Se ha enviado un correo a:",
-        "emailSent2": "Por favor, revisa tu bandeja de entrada y sigue las instrucciones para restablecer tu contraseña.",
-        "reset": "Restablecer contraseña",
-        "passwordReseted": "Tu contraseña ha sido restablecida con éxito. Puedes iniciar sesión con tu nueva contraseña."
-    },
-    "errorTypes": {
-        "auth": {
-            "wrongPassword": "La contraseña ingresada es incorrecta.",
-            "emailNotFound": "El correo electrónico ingresado no existe.",
-            "tooManyRequests": "Demasiados intentos fallidos, intente más tarde.",
-            "networkRequestFailed": "Error de conexión, intente más tarde",
-            "userUnconfirmed": "El usuario no ha sido confirmado",
-            "errorSendingConfirmationEmail": "Error al enviar el email de confirmación, por favor intente más tarde",
-            "emailAlreadyInUse": "El correo electrónico ya está en uso",
-            "errorLogIn": "Ocurrió un error al iniciar sesión",
-            "errorRegister": "Ocurrió un error al registrar el usuario",
-            "errorSendPasswordResetEmail": "Ocurrió un error al enviar el correo de restablecimiento de contraseña",
-            "errorSendingNewPassword": "Ocurrió un error al enviar la nueva contraseña",
-            "errorGoogleLogIn": "Ocurrió un error al iniciar sesión con Google"
         }
     }
+    
 }

@@ -5,7 +5,7 @@ import { useFormik } from "formik"
 import classNames from "classnames"
 
 // Components
-import { MInputText, MPassword, MSubmitButton } from "@components"
+import { MInputText, MPassword, MSubmitButton, PhotoPicker } from "@components"
 
 // Interfaces
 
@@ -74,6 +74,11 @@ export const RegisterStep1Page = () => {
                         <div
                             className="w-full flex flex-column gap-3"
                         >
+                            <div
+                                className="w-full flex justify-content-center pb-2"
+                            >
+                                <PhotoPicker />
+                            </div>
                             <div
                                 className={twoColumnsStyle}
                             >
