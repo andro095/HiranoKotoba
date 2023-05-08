@@ -4,12 +4,12 @@
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 // Interfaces
+import { UserInterface } from "@interfaces";
 
 // Hooks
 
 // Config
 import { FirebaseAuth } from "./config";
-import { UserInterface } from "@interfaces";
 
 
 const googleProvider = new GoogleAuthProvider();
@@ -39,4 +39,8 @@ export const signInWithGoogle = async() => {
             errorMessage
         }
     }
+};
+
+export const logoutFirebase = async() => {
+    return await FirebaseAuth.signOut();
 };

@@ -5,3 +5,4 @@ export * from './CardHeader';
 export * from './CardTitle';
 export * from './GoogleButton';
 export * from './MobileStepper';
+export * from './PhotoPicker';

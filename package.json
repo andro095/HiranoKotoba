@@ -33,6 +33,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0",
     "sort-by": "^1.2.0",
+    "use-file-picker": "^1.6.1",
     "yup": "^1.0.2"
   },
   "devDependencies": {

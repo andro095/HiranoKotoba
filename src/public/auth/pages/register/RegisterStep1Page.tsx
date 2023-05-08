@@ -77,7 +77,10 @@ export const RegisterStep1Page = () => {
                             <div
                                 className="w-full flex justify-content-center pb-2"
                             >
-                                <PhotoPicker />
+                                <PhotoPicker 
+                                    image={formik.values.image}
+                                    setImage={(image) => formik.setFieldValue('image', image)}
+                                />
                             </div>
                             <div
                                 className={twoColumnsStyle}

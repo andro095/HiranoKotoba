@@ -3,5 +3,6 @@ export const registerFields = {
     lastname: '',
     name: '',
     password: '',
-    passwordConfirm: ''
+    passwordConfirm: '',
+    image: ''
 }

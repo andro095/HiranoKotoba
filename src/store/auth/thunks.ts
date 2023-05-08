@@ -11,7 +11,7 @@ import { UserInterface } from "@interfaces"
 import { checkingCredentials, login, logout } from "./authSlice"
 
 // Firebase
-import { signInWithGoogle } from "@mfirebase"
+import { logoutFirebase, signInWithGoogle } from "@mfirebase"
 
 // Enums
 import { AuthResponseEnum } from "@enums"
@@ -39,5 +39,13 @@ export const startGoogleSignIn = () => {
 
         dispatch( login( result.user as UserInterface ) );
         
+    }
+}
+
+export const startLogout = () => {
+    return async( dispatch: any ) => {
+        await logoutFirebase();
+
+        dispatch( logout() );
     }
 }
