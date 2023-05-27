@@ -28,5 +28,9 @@ export default defineConfig({
             "@store": path.resolve(__dirname, "./src/store"),
             "@theme": path.resolve(__dirname, "./src/theme"),
         }
+    },
+    server: {
+        open:
+            process.env.BROWSER='/Applications/Microsoft\ Edge.app/Contents/MacOS/Microsoft\ Edge'
     }
 })
