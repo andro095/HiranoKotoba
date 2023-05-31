@@ -1,4 +1,5 @@
 // React Libraries
+import { useNavigate } from "react-router-dom"
 
 // Third Party Libraries
 import { useFormik } from "formik"
@@ -10,7 +11,7 @@ import { MInputText, MPassword, MSubmitButton, PhotoPicker } from "@components"
 // Interfaces
 
 // Hooks
-import { useBreakpoints, useMessage } from "@hooks"
+import { useAppDispatch, useBreakpoints, useMessage } from "@hooks"
 
 // Layouts
 import { AuthCardLayout, AuthLayout } from "../../layout"
@@ -20,13 +21,15 @@ import { registerSteps } from "../../constants"
 
 // Formik
 import { registerFields, registerSchema } from "../../formik"
-import { useNavigate } from "react-router-dom"
+import { IRegister } from "@interfaces"
+import { startRegisterWithEmailPassword } from "@store"
 
 export const RegisterStep1Page = () => {
 
     const formatMessage = useMessage();
     const { isXs, isSm } = useBreakpoints();
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
 
     const twoColumnsStyle = classNames(
         'w-full flex gap-1',
@@ -38,13 +41,27 @@ export const RegisterStep1Page = () => {
     const formik = useFormik({
         initialValues: registerFields,
         validationSchema: registerSchema(formatMessage),
-        onSubmit: (values, { setSubmitting }) => {
-            console.log(values)
+        onSubmit: async(values, { setSubmitting }) => {
+            
+            const user : IRegister = {
+                name: values.name,
+                lastName: values.lastname,
+                email: values.email,
+                password: values.password,
+                image: values.image || undefined
+            }
 
-            setTimeout(() => {
-                setSubmitting(false);
-                navigate('/auth/register/step2', { state: { email: values.email } })
-            }, 2000);
+            await dispatch( startRegisterWithEmailPassword(user) )
+            
+
+            setSubmitting(false)
+            
+            // console.log(values)
+
+            // setTimeout(() => {
+            //     setSubmitting(false);
+            //     navigate('/auth/register/step2', { state: { email: values.email } })
+            // }, 2000);
             // setSubmitting(false)
             // navigate('/auth/register/step2', { state: { email: values.email } })
         },

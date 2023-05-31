@@ -19,4 +19,8 @@ export const LoginPageStyle = {
     buttonLink: css({
         color: colors.secondary + imp,
     }),
+
+    card: css({
+        marginTop: "2rem",
+    })
 }

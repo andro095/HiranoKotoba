@@ -15,11 +15,11 @@ import { AuthCardLayoutProps } from '@interfaces';
 import { AuthCardLayoutStyle as styles } from "../styles";
         
 
-export const AuthCardLayout = ( { title, hasBackArrow = false, isSubmitting = false, bigCard = false, children } : AuthCardLayoutProps ) => {
+export const AuthCardLayout = ( { title, hasBackArrow = false, isSubmitting = false, bigCard = false, classnames, children } : AuthCardLayoutProps ) => {
     
     return (
         <div
-            className="w-full px-2 flex justify-content-center"
+            className={`w-full px-2 flex justify-content-center ${classnames}`}
         >
             <Card
                 className="overflow-hidden w-full"

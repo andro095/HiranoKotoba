@@ -14,4 +14,5 @@ export interface AuthCardLayoutProps {
     hasBackArrow?: boolean;
     isSubmitting?: boolean;
     title: string;
+    classnames?: string;
 }

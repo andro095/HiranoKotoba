@@ -1,5 +1,6 @@
 export * from './components';
 export * from './constants';
+export * from './firebase';
 export * from './generic';
 export * from './hooks';
 export * from './layouts';

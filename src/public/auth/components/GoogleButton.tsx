@@ -1,5 +1,5 @@
 // React Libraries
-import { useState } from "react"
+import { useMemo } from "react"
 
 // Third Party Libraries
 import { Button } from "primereact/button"
@@ -9,30 +9,26 @@ import { Button } from "primereact/button"
 // Interfaces
 
 // Hooks
-import { useAppDispatch, useBreakpoints, useMessage } from "@hooks";
+import { useAppDispatch, useBreakpoints, useCheckAuth, useMessage } from "@hooks";
 
 // Store
 import { startGoogleSignIn } from "@store";
+import { AuthStatus } from "@enums";
 
 
 export const GoogleButton = () => {
 
-    const [disabled, setDisabled] = useState(false);
-
     const dispatch = useAppDispatch();
+    const status = useCheckAuth();
     const formatMessage = useMessage();
     const { isXs, isSm } = useBreakpoints();
 
     // TODO: Implementar creación de usuario cuando se loguea con Google por primera vez
 
+    const isAuthenticating = useMemo(() => status === AuthStatus.Checking, [status]);
+
     const onClick = async() => {
-
-        setDisabled(true);
-
-        dispatch( startGoogleSignIn() )
-
-        setDisabled(false);
-
+        await dispatch( startGoogleSignIn() );
     }
 
 
@@ -42,7 +38,7 @@ export const GoogleButton = () => {
             type="button"
             icon="pi pi-google"
             severity="secondary"
-            disabled={ disabled }
+            disabled={ isAuthenticating }
             onClick={ onClick }
             size={ (isXs || isSm) ? 'small' : undefined }
         />

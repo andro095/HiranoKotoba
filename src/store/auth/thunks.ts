@@ -3,7 +3,7 @@
 // Third Party Libraries
 
 // Interfaces
-import { UserInterface } from "@interfaces"
+import { IRegister, IRegisterResponse, UserInterface } from "@interfaces"
 
 // Hooks
 
@@ -11,7 +11,7 @@ import { UserInterface } from "@interfaces"
 import { checkingCredentials, login, logout } from "./authSlice"
 
 // Firebase
-import { logoutFirebase, signInWithGoogle } from "@mfirebase"
+import { logoutFirebase, registerUserWithEmailPassword, signInWithGoogle } from "@mfirebase"
 
 // Enums
 import { AuthResponseEnum } from "@enums"
@@ -47,5 +47,15 @@ export const startLogout = () => {
         await logoutFirebase();
 
         dispatch( logout() );
+    }
+}
+
+export const startRegisterWithEmailPassword = ( user: IRegister ) => {
+    return async( dispatch: any ) => {
+        dispatch( checkingCredentials() );
+        
+        const resp : IRegisterResponse = await registerUserWithEmailPassword( user );
+
+        console.log( resp );
     }
 }

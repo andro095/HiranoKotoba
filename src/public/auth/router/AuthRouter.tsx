@@ -15,9 +15,25 @@ import { ResetRouter } from "./ResetRouter"
 
 // Pages
 import { LoginPage } from "../pages"
+import { useCheckAuth } from "@hooks"
+import { AuthStatus } from "@enums"
+import { AuthLayout } from "../layout"
+import { AuthLoader } from "../components"
 
 
 export const AuthRouter = () => {
+
+    const status = useCheckAuth();
+
+    // if (status === AuthStatus.Checking) {
+    //     return (
+    //         <AuthLayout>
+    //             <AuthLoader />
+    //         </AuthLayout>
+    //     )
+    // }
+
+
     return (
         <Routes>
             <Route path="/login" element={ <LoginPage /> } />
